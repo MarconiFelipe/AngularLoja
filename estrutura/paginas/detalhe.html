@@ -1,0 +1,18 @@
+<div class="jumbotron">
+    <h1>Comprar.net</h1>
+    <p>Sua loja virtual!</p>
+    <a href="#/">Clique aqui para retornar a página inícial</a>
+</div>
+<div class="col-sm-4 form-group">
+  <carousel interval="intervalo">
+      <slide ng-repeat="imagem in produto.imagems" active="imagem.active">
+          <img ng-src="{{imagem.dir}}" style="margin:auto">
+      </slide>
+  </carousel>
+</div>
+<div class="col-sm-7 form-group">
+    <h1>{{produto.nome}}</h1>
+    <h2>Preço: {{produto.preco | currency}}</h2>
+    <p><b>Informações</b>: {{produto.info}}</p>
+    <p><b>Fabricante</b>: {{produto.categoria}}</p>
+</div>
